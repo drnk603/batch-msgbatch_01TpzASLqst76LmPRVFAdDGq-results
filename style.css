@@ -1785,10 +1785,7 @@ input.is-valid:focus {
   background-color: var(--color-background-alt);
 }
 
-.bg-dark {
-  background-color: var(--color-neutral-900);
-  color: white;
-}
+
 
 .bg-primary {
   background-color: var(--color-primary);
@@ -1888,5 +1885,27 @@ input.is-valid:focus {
 @media (min-width: 576px) and (max-width: 767px) {
   .mt-sm-0 {
     margin-top: 0 !important;
+  }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }

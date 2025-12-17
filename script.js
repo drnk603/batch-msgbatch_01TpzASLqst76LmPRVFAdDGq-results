@@ -426,9 +426,9 @@
     var forms = doc.querySelectorAll('form, .needs-validation');
 
     var patterns = {
-      name: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
-      email: /^[^s@]+@[^s@]+.[^s@]+$/,
-      phone: /^[ds+-()]{10,20}$/,
+      name: /^[a-zA-ZÀ-ÿ\s-']{2,50}$/,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      phone: /^[\d\s+\-()]{10,20}$/,
       message: /.{10,}/
     };
 
@@ -869,28 +869,3 @@
   }
 
 })(window);
-:root {
-  --header-h: 70px;
-}
-
-@media (max-width: 991px) {
-  .navbar-nav {
-    height: calc(100vh - var(--header-h)) !important;
-    padding-top: calc(var(--header-h) + 1rem) !important;
-  }
-}
-
-.u-no-scroll {
-  overflow: hidden !important;
-}
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1000;
-}
-
-.modal-backdrop {
-  backdrop-filter: blur(4px);
-}
